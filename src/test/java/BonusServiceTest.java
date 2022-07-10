@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class BonusServiceTest {
@@ -54,9 +55,10 @@ public class BonusServiceTest {
 
         assertEquals(expected, actual);
     }
+
     // Граничные значения
     @org.junit.jupiter.api.Test
-    void shouCalculateForRegisterBeforeBorder(){
+    void shouCalculateForRegisterBeforeBorder() {
         BonusService service = new BonusService();
 
         long amount = 16_640;
@@ -67,8 +69,9 @@ public class BonusServiceTest {
 
         assertEquals(expected, actual);
     }
+
     @org.junit.jupiter.api.Test
-    void shouCalculateForRegisterOnTheBorder(){
+    void shouCalculateForRegisterOnTheBorder() {
         BonusService service = new BonusService();
 
         long amount = 16_670;
@@ -79,8 +82,9 @@ public class BonusServiceTest {
 
         assertEquals(expected, actual);
     }
+
     @org.junit.jupiter.api.Test
-    void shouCalculateForRegisterAfterTheBorder(){
+    void shouCalculateForRegisterAfterTheBorder() {
         BonusService service = new BonusService();
 
         long amount = 16_700;
@@ -91,8 +95,9 @@ public class BonusServiceTest {
 
         assertEquals(expected, actual);
     }
+
     @org.junit.jupiter.api.Test
-    void shouCalculateForUnregisterBeforeBorder(){
+    void shouCalculateForUnregisterBeforeBorder() {
         BonusService service = new BonusService();
 
         long amount = 49_990;
@@ -103,8 +108,9 @@ public class BonusServiceTest {
 
         assertEquals(expected, actual);
     }
+
     @org.junit.jupiter.api.Test
-    void shouCalculateForUnregisterOnTheBorder(){
+    void shouCalculateForUnregisterOnTheBorder() {
         BonusService service = new BonusService();
 
         long amount = 50_000;
@@ -115,8 +121,9 @@ public class BonusServiceTest {
 
         assertEquals(expected, actual);
     }
+
     @org.junit.jupiter.api.Test
-    void shouCalculateForUnregisterAfterTheBorder(){
+    void shouCalculateForUnregisterAfterTheBorder() {
         BonusService service = new BonusService();
 
         long amount = 50100;
@@ -127,8 +134,9 @@ public class BonusServiceTest {
 
         assertEquals(expected, actual);
     }
+
     @org.junit.jupiter.api.Test
-    void shouCalculateForRegisterAndMinAmount(){
+    void shouCalculateForRegisterAndMinAmount() {
         BonusService service = new BonusService();
 
         long amount = 1;
@@ -139,8 +147,9 @@ public class BonusServiceTest {
 
         assertEquals(expected, actual);
     }
+
     @org.junit.jupiter.api.Test
-    void shouCalculateForUnregisterAndMinAmount(){
+    void shouCalculateForUnregisterAndMinAmount() {
         BonusService service = new BonusService();
 
         long amount = 1;
@@ -154,7 +163,7 @@ public class BonusServiceTest {
 
     //Негатив
     @org.junit.jupiter.api.Test
-    void shouCalculateForRegisterAndZeroValue(){
+    void shouCalculateForRegisterAndZeroValue() {
         BonusService service = new BonusService();
 
         long amount = 0;
@@ -165,8 +174,9 @@ public class BonusServiceTest {
 
         assertEquals(expected, actual);
     }
+
     @org.junit.jupiter.api.Test
-    void shouCalculateForUnregisterAndZeroValue(){
+    void shouCalculateForUnregisterAndZeroValue() {
         BonusService service = new BonusService();
 
         long amount = 0;
@@ -177,8 +187,9 @@ public class BonusServiceTest {
 
         assertEquals(expected, actual);
     }
+
     @org.junit.jupiter.api.Test
-    void shouCalculateForRegisterAndNegativeValue(){
+    void shouCalculateForRegisterAndNegativeValue() {
         BonusService service = new BonusService();
 
         long amount = -10;
@@ -191,7 +202,7 @@ public class BonusServiceTest {
     }
 
     @org.junit.jupiter.api.Test
-    void shouCalculateForUnregisterAndNegativeValue(){
+    void shouCalculateForUnregisterAndNegativeValue() {
         BonusService service = new BonusService();
 
         long amount = -10;
@@ -202,8 +213,6 @@ public class BonusServiceTest {
 
         assertEquals(expected, actual);
     }
-
-
 
 
 }
